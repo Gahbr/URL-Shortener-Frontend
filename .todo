@@ -1,0 +1,11 @@
+- [X] Set up project structure
+- [X] Design the user interface
+- [X] Implement URL input field
+- [X] Add functionality to shorten URLs
+- [X] Set up shorten api integration
+- [X] Display shortened URLs
+- [x] Implement copy-to-clipboard feature
+- [ ] Add error handling for invalid URLs
+- [ ] Refactor folder structures
+- [ ] Improve loading component
+- [ ] Deploy the frontend
