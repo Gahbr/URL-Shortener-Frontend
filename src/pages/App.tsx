@@ -16,9 +16,10 @@ const App = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(apiUrl, { url: url });
+      const response = await axios.post(`${apiUrl}/shorturl`, { url: url });
 
       if (response.status === 200) {
+        console.log("data",response.data)
         setShortenedUrl(response.data.short);
         navigate(`/result/${response.data.short}`);
       } else {
@@ -37,7 +38,6 @@ const App = () => {
       <small>
         When you visit <b style={{ color: 'orangered' }}>/:shorturl:</b>, you will be
         redirected to the original URL.
-      {apiUrl}
       </small>
       <main>
         <section>
