@@ -3,8 +3,7 @@ import { useParams } from 'react-router-dom';
 
 const ResultPage = () => {
   const { shortUrl } = useParams<{ shortUrl: string }>();
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [baseUrl, setBaseUrl] = useState<string>(''); // Set your base URL here
+  const [baseUrl, setBaseUrl] = useState<string>(''); 
   const [url, setUrl] = useState<string | null>(null);
 
   useEffect(() => {
@@ -17,8 +16,7 @@ const ResultPage = () => {
     }
   }, [shortUrl]);
 
-  // Copy text to clipboard
-  const copyText = () => {
+  const copyTextHandler = () => {
     if (url) {
       navigator.clipboard.writeText(url);
       console.log('Copied the text: ' + url);
@@ -42,7 +40,7 @@ const ResultPage = () => {
                 'Not found'
               )}
             </p>
-            <button className="copyBtn" onClick={copyText}>
+            <button className="copyBtn" onClick={copyTextHandler}>
               Copy to clipboard!
             </button>
             <button className="copyBtn" onClick={() => window.location.href = '/'}>

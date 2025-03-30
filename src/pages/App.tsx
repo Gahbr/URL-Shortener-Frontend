@@ -20,7 +20,6 @@ const App = () => {
 
       if (response.status === 200) {
         setShortenedUrl(response.data.short);
-        console.log("shortened- "+response.data.short)
         navigate(`/result/${response.data.short}`);
       } else {
         throw new Error('Failed to shorten the URL');

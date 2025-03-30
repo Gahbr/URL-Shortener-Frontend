@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import App from './pages/App';
-import ResultPage from './pages/result';  // Assuming 'result.tsx' is your result page
-
+import ResultPage from './pages/result';  
 const AppRouter = () => {
   return (
     <Router>
