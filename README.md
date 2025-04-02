@@ -1,54 +1,93 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## URL Shortener Frontend
 
-Currently, two official plugins are available:
+This project is the frontend for a URL shortener application built using React, TypeScript, and Vite. It provides a user-friendly interface for shortening URLs and managing them efficiently. For the backend API, check the repository here - https://github.com/Gahbr/URL-Shortener
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Features
 
-## Expanding the ESLint configuration
+- **React + TypeScript**: Leverages the power of TypeScript for type safety and React for building the UI.
+- **Vite**: Fast and modern build tool for development and production.
+- **URL Management**: Shorten URLs and view a list of previously shortened URLs.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Getting Started
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Follow these steps to set up and run the project locally:
+
+#### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+
+#### Installation
+
+1. Clone the repository:
+  ```bash
+  git clone https://github.com/your-username/URL-Shortener-frontend.git
+  cd URL-Shortener-frontend/my-react-app
+  ```
+
+2. Install dependencies:
+  ```bash
+  npm install
+  # or
+  yarn install
+  ```
+
+#### Running the Development Server
+
+Start the development server with the following command:
+
+```bash
+npm run dev
+# or
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The application will be available at `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+#### Building for Production
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+To build the project for production, run:
+
+```bash
+npm run build
+# or
+yarn build
 ```
+
+The output will be in the `dist` directory.
+
+### Folder Structure
+
+```
+/src
+  /components    # Reusable React components
+  /pages         # Application pages
+  /styles        # CSS/SCSS files
+  /utils         # Utility functions
+  /assets        # Static assets (images, icons, etc.)
+```
+
+### Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes and push the branch.
+4. Open a pull request.
+
+### License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+### Acknowledgments
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [ESLint](https://eslint.org/)
+- [SWC](https://swc.rs/)
+- [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x)
+- [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom)

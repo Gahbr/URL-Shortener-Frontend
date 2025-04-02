@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "author": "Gabriel Ribeiro",
+  "homepage": "https://short4u.netlify.app",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
