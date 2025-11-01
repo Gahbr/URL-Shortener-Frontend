@@ -1,4 +1,3 @@
-
 ## URL Shortener Frontend
 
 This project is the frontend for a URL shortener application built using React, TypeScript, and Vite. It provides a user-friendly interface for shortening URLs and managing them efficiently. For the backend API, check the repository here - https://github.com/Gahbr/URL-Shortener
@@ -22,17 +21,19 @@ Follow these steps to set up and run the project locally:
 #### Installation
 
 1. Clone the repository:
-  ```bash
-  git clone https://github.com/your-username/URL-Shortener-frontend.git
-  cd URL-Shortener-frontend/my-react-app
-  ```
+
+```bash
+git clone https://github.com/your-username/URL-Shortener-frontend.git
+cd URL-Shortener-frontend/my-react-app
+```
 
 2. Install dependencies:
-  ```bash
-  npm install
-  # or
-  yarn install
-  ```
+
+```bash
+npm install
+# or
+yarn install
+```
 
 #### Running the Development Server
 

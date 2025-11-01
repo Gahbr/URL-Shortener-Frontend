@@ -13,20 +13,19 @@ const RedirectPage = () => {
     const fetchOriginalUrl = async () => {
       try {
         const response = await axios.get(`${apiUrl}/${shortenedlink}`);
-        
+
         if (response.status === 200) {
           const originalUrl = response.data.originalUrl;
           console.log("Redirecting to:", originalUrl);
 
           window.location.href = originalUrl;
-        } else if(response.status === 404) {
+        } else if (response.status === 404) {
           setError("Shortened URL not found.");
-
-        }else {
+        } else {
           setError("Failed to retrieve the original URL.");
         }
       } catch (err) {
-        console.error(err)
+        console.error(err);
         setError("An error occurred while fetching the URL.");
       } finally {
         setLoading(false);
@@ -56,7 +55,14 @@ const RedirectPage = () => {
         </main>
         <footer>
           <p>
-            By <a href="https://github.com/Gahbr" target="_blank" rel="noopener noreferrer">Gahbr</a>
+            By{" "}
+            <a
+              href="https://github.com/Gahbr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Gahbr
+            </a>
           </p>
         </footer>
       </div>

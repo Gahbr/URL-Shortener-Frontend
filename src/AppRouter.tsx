@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import App from './pages/App';
-import ResultPage from './pages/result';  
-import RedirectPage from './components/RedirectPage';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import App from "./pages/App";
+import ResultPage from "./pages/result";
+import RedirectPage from "./components/RedirectPage";
 const AppRouter = () => {
   return (
     <Router>
