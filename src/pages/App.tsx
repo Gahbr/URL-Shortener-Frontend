@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Bounce, toast, ToastContainer } from "react-toastify";
 
 const App = () => {
   const navigate = useNavigate();
@@ -26,12 +27,34 @@ const App = () => {
         throw new Error("Failed to shorten the URL");
       }
     } catch (error) {
+      toast.error("Failed to shorten the URL", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
       console.error("Error:", error);
     }
   };
 
   return (
     <div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
       <h1>URL Shortener Microservice</h1>
       <small>Insert the URL you want to shorten.</small>
       <br />
